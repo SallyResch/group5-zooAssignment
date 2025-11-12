@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    background-color: coral;
+}
+
+.banner {
+    background-color: black;
+    color: antiquewhite;
+}
+
+.main-div {
+    flex-grow: 1;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.sidebar {
+    background-color: aqua;
+}
+
+.main-content {
+    background-color: rgb(245, 129, 255);
+    width: 100%;
+}
+
+.footer {
+    background-color: coral;
+}
