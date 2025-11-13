@@ -38,12 +38,14 @@ body {
   color: var(--white-color);
   text-decoration: none;
   border: none;
-  padding: 1rem;
+  padding: 0.85rem;
   font-size: 1.2rem;
+  border-radius: 8px;
 }
 
 .navbar a:hover {
   color: #14190a;
+  background-color: var(--nav-hover-text);
 }
 
 .banner {
