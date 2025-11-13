@@ -12,6 +12,9 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
 }
 
 html {
@@ -26,7 +29,26 @@ body {
 }
 
 .header {
-  background-color: coral;
+  background-color: var(--nav-backround-green);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.navbar a{
+
+  color: var(--white-color);
+  text-decoration: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+
+}
+
+.navbar a:hover{
+
+  color: #14190a;
 }
 
 .banner {
