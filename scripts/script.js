@@ -12,6 +12,7 @@ function Animal(name, image, food, group, link) {
 const enchidna = new Animal("Enchidna", "image", "Insects such as ants and termites, beetles larvae and worms", "Mammal", "mammalLink");
 const tasmanianDevil = new Animal("Tasmanian Devil", "image", "A predator, then eat meat from other animals such as wallabies and wombats", "Mammal", "mammalLink");
 const quokka = new Animal("Quokka", "image", "Plant eaters, they munch on shrubs and grasses", "Mammal", "mammalLink");
+const kangaroo = new Animal("Kangaroo", "image", "Plant eaters, they munch on shrubs and grasses", "Mammal", "mammalLink");
 const cassowary = new Animal("Cassowary", "image", "Plants matter like fruit, insects and small animals like mice and lizards", "Bird", "birdLink");
 const kookaburra = new Animal("Kookaburra", "image", "Insects and small animals including snakes, frogs and lizards", "Bird", "birdLink");
 const cockatoo = new Animal("Yellow Tailed Black Cockatoo", "image", "Fruit, seeds and other plant material", "Bird", "birdLink");
@@ -19,7 +20,7 @@ const lizard = new Animal("Frill-Necked Lizard", "image", "Small insects and spi
 const turtle = new Animal("Hawksbill Turtle", "image", "Other animals (sponges & jellyfish), sea plants", "Reptile", "reptileLink");
 const perentie = new Animal("Perentie", "image", "Carnivore, they eat animals like kangaroos, rabbits, lizards and birds", "Reptile", "reptileLink");
 
-let animalArray = [enchidna, tasmanianDevil, quokka, cassowary, kookaburra, cockatoo, lizard, turtle, perentie]
+let animalArray = [enchidna, tasmanianDevil, quokka, kangaroo, cassowary, kookaburra, cockatoo, lizard, turtle, perentie]
 
 animalArray.forEach(animal => {
   const btn = document.createElement("div");
@@ -30,7 +31,7 @@ animalArray.forEach(animal => {
   animalName.textContent = animal.name;
 
   const animalImage = document.createElement("img");
-  animalImage.textContent = animal.image;
+  animalImage.textContent = `${animal.image}`;
 
   const animalGroup = document.createElement("p");
   animalGroup.textContent = `Group: ${animal.group}`;
