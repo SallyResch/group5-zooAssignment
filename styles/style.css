@@ -12,6 +12,9 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
 }
 
 html {
@@ -19,14 +22,30 @@ html {
 }
 
 body {
-  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
 
 .header {
-  background-color: coral;
+  background-color: var(--nav-backround-green);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: var(--white-color);
+  text-decoration: none;
+  border: none;
+  padding: 0.85rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+}
+
+.navbar a:hover {
+  color: #14190a;
+  background-color: var(--nav-hover-text);
 }
 
 .banner {
