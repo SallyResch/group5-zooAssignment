@@ -7,7 +7,7 @@ video.loop = true;
 video.playsInline = true;
 video.muted = true;
 video.autoplay = true;
-video.autoplay = true;
+
 
 video.classList.add("bg_video");
 
