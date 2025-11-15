@@ -25,6 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  background-color: var(--background-body-offwhite);
 }
 
 .header {
@@ -38,18 +39,27 @@ body {
   color: var(--white-color);
   text-decoration: none;
   border: none;
-  padding: 1rem;
+  padding: 0.85rem;
   font-size: 1.2rem;
+  border-radius: 8px;
 }
 
 .navbar a:hover {
   color: #14190a;
+  background-color: var(--nav-hover-text);
 }
 
 .banner {
-  background-color: black;
-  color: antiquewhite;
+  min-width:100%;
+  height: 60vh;
+  background-image: url('../images/echidna-banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  
 }
+
+
 
 .main-div {
   flex-grow: 1;
@@ -61,15 +71,46 @@ body {
   height: 100%;
 }
 
-.sidebar {
-  background-color: aqua;
+.img{
+
+  width: 40%;
+  height: 30vh;
+  border-radius: 10px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
   
+}
+
+.sidebar {
+  background-color: var(--medium-grey);
+  padding: 10px 0 10px 0;
+  text-align: center;
+  
+}
+
+.h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.el {
+  background-color: var(--dark-grey);
+  color: var(--white-color);
+  padding: 5px;
+  margin: 5px 0 5px 0;
+}
+
+.el:hover {
+  background-color: var(--background-body-offwhite);
+  color: var(--nav-dark-black);
 }
 
 .main-content {
   background-color: var(--light-grey);
   border: transparent;
-  border-radius: 8px;
+  text-align: center;
+
   width: 100%;
   height: 40vh;
   padding: 1rem;
@@ -107,3 +148,5 @@ body {
   background-color: var(--dark-grey);
   color: var(--white-color);
 }
+
+
