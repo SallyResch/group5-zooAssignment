@@ -1,0 +1,8 @@
+.reptiles-banner {
+  background-image: url(../images/Reptiles/reptiles-page-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  width: 100%;
+}
