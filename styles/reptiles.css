@@ -3,6 +3,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 300px;
+  min-height: 400px;
   width: 100%;
+}
+
+.page-title {
+  text-align: center;
 }
