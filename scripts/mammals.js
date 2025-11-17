@@ -1,65 +1,114 @@
-
-const banner=document.querySelector('.banner');
-const bg_banner=document.createElement('img');
-const sidebar=document.querySelector('.sidebar')
+const banner = document.querySelector(".banner");
+const bg_banner = document.createElement("img");
+const sidebar = document.querySelector(".sidebar");
 const main_content = document.querySelector(".main-content");
-const h2=document.createElement('h2');
-h2.textContent=`Mammals`;
-h2.classList.add('h2');
+const h2 = document.createElement("h2");
+h2.textContent = `Mammals`;
+h2.classList.add("h2");
 sidebar.appendChild(h2);
 
-
-
-function Mammal(img,name,about){
-
-  this.img=img,
-  this.name=name,
-  this.about= about;
+function Mammal(img, name, aboutShort, aboutFull) {
+  (this.img = img), (this.name = name), (this.aboutShort = aboutShort);
+  this.aboutFull = aboutFull;
 }
 
-const Echidna= new Mammal('images/Echidna2.jpg', 'Echidna','The African Lion is a large cat known for its majestic mane and powerful roar. They are social animals living in prides.');
-const Quokka= new Mammal('images/quokka1.jpg', 'Quokka','The African Lion is a large cat known for its majestic mane and powerful roar. They are social animals living in prides.')
-const TasmanianDevil= new Mammal('images/tasmanian-devil1.jpg', 'Tasmanian Devil','The African Lion is a large cat known for its majestic mane and powerful roar. They are social animals living in prides.')
+const Echidna = new Mammal(
+  "images/Echidna2.jpg",
+  "Echidna",
+  "The echidna is a unique egg-laying mammal found in Australia.",
+  "The echidna is a unique egg-laying mammal found in Australia. It has spines, a long sticky tongue and feeds mainly on ants and termites."
+);
+const Quokka = new Mammal(
+  "images/quokka1.jpg",
+  "Quokka",
+  "The quokka is a small, friendly marsupial native to Western Australia",
+  "The quokka is a small, friendly marsupial native to Western Australia. It is known for its adorable smile, round body, and curious nature. Quokkas live mainly on Rottnest Island and feed on leaves, grasses, and shrubs. They are mostly active at night and are not afraid of humans, which makes them very popular among tourists."
+);
+const TasmanianDevil = new Mammal(
+  "images/tasmanian-devil1.jpg",
+  "Tasmanian Devil",
+  "The Tasmanian Devil is a carnivorous marsupial known for its loud screeches and strong bite.",
+  "The Tasmanian Devil is a carnivorous marsupial found only on the island of Tasmania. Despite its small size, it has one of the strongest bites relative to body size in the animal kingdom. Devils are scavengers and predators that feed on carrion, small mammals, and birds. They are famous for their fierce behavior, loud screeches, and powerful jaws. Conservation efforts are ongoing due to a contagious facial tumor disease that threatens the species."
+);
 
-const mammal_arr=[Echidna,Quokka,TasmanianDevil];
+const mammal_arr = [Echidna, Quokka, TasmanianDevil];
 
-let click=0;
-mammal_arr.forEach(mammal =>{
+let click = 0;
+const originalHTML = main_content.innerHTML;
 
-  const el=document.createElement('div');
-  el.textContent=mammal.name;
-  el.classList.add('el')
-  el.addEventListener('click',()=>{
+mammal_arr.forEach((mammal) => {
+  const el = document.createElement("div");
+  el.textContent = mammal.name;
+  el.classList.add("el");
+  el.addEventListener("click", () => {
 
+    const display = document.createElement("div");
     click++;
-    main_content.innerHTML=''
-  
-    const displayEchidna=document.createElement('div');
-    const img=document.createElement('img');
-    img.src=mammal.img;
-    img.classList.add('img');
-    displayEchidna.appendChild(img);
-    main_content.appendChild(displayEchidna);
     
-    const name=document.createElement('h2');
-    name.textContent=mammal.name
-    name.classList.add('h2');
-    displayEchidna.appendChild(name);
+    // if(click===1){
 
-    const aboutEchidna=document.createElement('p');
-    aboutEchidna.textContent=`The African Lion is a large cat known for its majestic mane and powerful roar. They are social animals living in prides.`
-    displayEchidna.appendChild(aboutEchidna);
+    //    
+    //    return
 
-  })
+    // }
+
+    //  if (click === 2) {
+    //   //display.innerHTML = "";
+    //   main_content.innerHTML = originalHTML;
+    //   click=0;
+      
+    //  }
+
+   main_content.innerHTML = "";
+
+    const img = document.createElement("img");
+    img.src = mammal.img;
+    img.classList.add("img");
+    display.appendChild(img);
+    main_content.appendChild(display);
+
+    const name = document.createElement("h2");
+    name.textContent = mammal.name;
+    name.classList.add("h2");
+    display.appendChild(name);
+
+    const infoShort = document.createElement("p");
+    infoShort.textContent = mammal.aboutShort;
+    const buttonMore = document.createElement("button");
+    buttonMore.classList.add("button");
+    buttonMore.textContent = `Read More`;
+    display.appendChild(infoShort);
+    display.appendChild(buttonMore);
+
+    const infoFull = document.createElement("p");
+    infoFull.textContent = mammal.aboutFull;
+    infoFull.classList.add("hide");
+    const buttonLess = document.createElement("button");
+    buttonLess.classList.add("button");
+    buttonLess.textContent = `Read Less`;
+    buttonLess.classList.add("hide");
+    display.appendChild(infoFull);
+    display.appendChild(buttonLess);
+
+    const buttons = [buttonMore, buttonLess];
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        if (button === buttonMore) {
+          buttonMore.classList.add("hide");
+          infoFull.classList.remove("hide");
+          buttonLess.classList.remove("hide");
+        } else if (button === buttonLess) {
+          buttonLess.classList.add("hide");
+          infoFull.classList.add("hide");
+          buttonMore.classList.remove("hide");
+        }
+      });
+    });
+  });
+
   sidebar.appendChild(el);
-
-  
-})
-
-
-
-
-
+});
 
 const mammalsAbout = document.createElement("p");
 const mammalsHeader = document.createElement("h1");

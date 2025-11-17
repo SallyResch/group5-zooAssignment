@@ -24,7 +24,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .header {
@@ -45,7 +45,6 @@ body {
 .navbar a:hover {
   color: #14190a;
   background-color: var(--nav-background-green);
-  ;
 }
 
 .navbar a {
@@ -74,18 +73,20 @@ body {
 .main {
   display: flex;
   flex-direction: row;
-  height: 100%;
 }
 
 .sidebar {
   background-color: aqua;
+  min-height: 100vh;
 }
 
 .main-content {
   background-color: rgb(245, 129, 255);
   width: 100%;
+  min-height: 100vh;
 }
 
 .footer {
   background-color: coral;
+  padding: 1rem;
 }
