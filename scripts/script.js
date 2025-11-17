@@ -53,6 +53,7 @@ animalArray.forEach(animal => {
 
   sidebarDiv.appendChild(btn);
 })
+
 const banner = document.querySelector(".banner");
 
 const video = document.createElement("video");
