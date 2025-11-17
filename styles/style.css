@@ -175,3 +175,45 @@ body {
     text-align: left;
   }
 }
+
+.footer-logo-title img {
+  height: 40px;
+  width: auto;
+}
+
+.footer-div h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-div p {
+  line-height: 1.4;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.footer-copyright {
+  flex-basis: 100%;
+  text-align: center;
+  border-top: 1px solid var(--medium-grey);
+  font-size: 0.85rem;
+  padding-top: 1rem;
+}
+
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .footer-div {
+    align-items: flex-start;
+    flex: 1;
+  }
+
+  .footer-div p {
+    text-align: left;
+  }
+}
