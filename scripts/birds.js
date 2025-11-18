@@ -1,5 +1,6 @@
 const sidebarDiv = document.querySelector(".sidebar");
 const mainDiv = document.querySelector(".main-content");
+const originalMainHTML = mainDiv.innerHTML;
 
 function Bird(name, image, lifespan, food, group, length, weight, found, link) {
   this.name = name;
@@ -29,7 +30,7 @@ birdList.forEach((bird) => {
   btn.addEventListener("click", () => {
     if (btn.classList.contains("active")) {
       btn.classList.remove("active");
-      mainDiv.textContent = "Welcome to birds page";
+      mainDiv.innerHTML = originalMainHTML;
       return;
     }
 
@@ -52,7 +53,7 @@ birdList.forEach((bird) => {
     const image = document.createElement("img");
     image.src = bird.image;
     image.alt = bird.name;
-    image.style.width = "300px";
+    image.style.width = "150px";
     image.style.objectFit = "cover";
 
     const group = document.createElement("p");
