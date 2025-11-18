@@ -93,6 +93,13 @@ body {
   padding: 5% 20%;
 }
 
+.animal-image {
+  margin: 10px;
+  width: 200px;
+  border-radius: 15px;
+  border: 1px solid var(--dark-grey);
+}
+
 .footer {
   background-color: var(--footer-background-green);
   color: var(--nav-hover-text);
@@ -153,6 +160,7 @@ body {
   .sidebar {
     background-color: var(--medium-grey);
     padding: 10px 0 10px 0;
+    font-size: x-large;
   }
 
   .sidebar-title {
