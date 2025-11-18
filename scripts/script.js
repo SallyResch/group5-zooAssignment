@@ -1,7 +1,7 @@
 const sidebarDiv = document.querySelector(".sidebar");
 const openBtn = document.querySelector(".sidebar-menu-icon");
 const mainContentDiv = document.querySelector(".main-content");
-const closeButton = document.querySelector(".close-button");
+const closeIcon = document.querySelector(".close-icon");
 const initialMainContent = mainContentDiv.innerHTML;
 
 function Animal(name, image, description, food, group, link) {
@@ -105,15 +105,16 @@ banner.appendChild(video);
 
 const openSidebar = () => {
   openBtn.addEventListener("click", () => {
-    sidebarDiv.classList.toggle("show");
+    sidebarDiv.classList.add("show");
   });
 }
 openSidebar();
 
 const closeSidebar = () => {
-  closeButton.addEventListener("click", () => {
-    close.classList.toggle("close");
+  closeIcon.addEventListener("click", () => {
+    sidebarDiv.classList.remove("show");
   })
 }
+closeSidebar();
 
 
