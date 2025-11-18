@@ -35,8 +35,9 @@ const mammal_arr = [Echidna, Quokka, TasmanianDevil];
 
 let currentAnimal='';
 let click = 0;
-let originalHTML = main_content.innerHTML;
+//let originalHTML = main_content.innerHTML;
 const display = document.createElement("div");
+display.classList.add('display_content')
 
 mammal_arr.forEach((mammal) => {
   const el = document.createElement("div");
@@ -44,16 +45,25 @@ mammal_arr.forEach((mammal) => {
   el.classList.add("el");
   el.addEventListener("click", () => {
 
-    if(currentAnimal === mammal.name && click === 1){
+    // currentAnimal= `${mammal.name} clicked!`;
+    // console.log(currentAnimal); 
+    // click++;
+    // console.log `${click}`
 
-      main_content.innerHTML=originalHTML;
-      display.innerHTML='';
-      click=0;
-      currentAnimal=0;
+    if(currentAnimal === mammal.name){
+
+      main_content.classList.add('hide');
+      display.classList.add('show')
+      return;
+
+      // main_content.innerHTML=originalHTML;
+      // display.innerHTML='';
+      // click=0;
+      // currentAnimal=0;
       // //mammalsAbout.classList.remove('hide');
       // display.classList.add('show');
       // currentAnimal= null;
-      return;
+      //return;
     }
 
     
@@ -67,22 +77,19 @@ mammal_arr.forEach((mammal) => {
 
 
     
-    currentAnimal= `${mammal.name} clicked!`;
-    console.log(currentAnimal); 
-    click++;
-    console.log `${click}`
+    
     
 
    //main_content.classList.add('hide');
-    click = 1;
-  currentAnimal = mammal.name;
+  //   click = 1;
+  // currentAnimal = mammal.name;
 
   
-  main_content.innerHTML = "";
-  display.innerHTML = "";
+  // main_content.innerHTML = "";
+  // display.innerHTML = "";
 
-    main_content.innerHTML = "";
-    main_content.appendChild(display);
+  //   main_content.innerHTML = "";
+    //main_content.appendChild(display);
 
     const img = document.createElement("img");
     img.src = mammal.img;
