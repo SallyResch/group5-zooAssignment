@@ -1,0 +1,13 @@
+.banner-birds {
+    background-image: url(../images/cassowary-banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+}
+
+.sidebar-button.active {
+    background-color: var(--background-body-offwhite);
+    color: var(--nav-dark-black);
+}
