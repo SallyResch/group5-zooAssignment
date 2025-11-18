@@ -54,6 +54,15 @@ body {
   background-color: var(--nav-hover-text);
 }
 
+.ham_menu {
+  display: none;
+}
+
+.fa-bars {
+  font-size: 2rem;
+  color: var(--nav-hover-text);
+}
+
 .banner {
   /* //background-color: black; */
   position: relative;
@@ -157,7 +166,6 @@ body {
   padding-top: 1rem;
 }
 
-
 @media (min-width: 768px) {
   .footer {
     flex-direction: row;
@@ -173,5 +181,41 @@ body {
 
   .footer-div p {
     text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    transform: translateX(343px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    background-color: var(--nav-hover-text);
+  }
+
+  .header {
+    padding: 3rem;
+  }
+
+  .ham_menu {
+    display: block;
+    position: absolute;
+    right: 2rem;
+  }
+
+  .navbar a {
+    font-size: 0.5rem;
+    color: var(--nav-dark-black);
+    font-size: 1rem;
+  }
+
+  .navbar.show {
+    transform: translateX(225px);
   }
 }

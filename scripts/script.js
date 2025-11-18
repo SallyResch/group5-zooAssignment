@@ -62,3 +62,16 @@ video.autoplay = true;
 video.classList.add("bg_video");
 
 banner.appendChild(video);
+
+////navbarResponsive////
+
+const ham_menu = document.querySelector('.ham_menu');
+const navbar= document.querySelector('.navbar');
+
+
+ham_menu.addEventListener('click',()=>{
+
+  navbar.classList.toggle('show')
+})
+
+
