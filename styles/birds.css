@@ -23,20 +23,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* yatay ortalama */
     text-align: center;
-    /* yazıları ortalar */
     padding: 20px;
 
 }
 
 .main-content p {
     max-width: 600px;
-    /* paragraf uzunluğunu kontrol eder */
     line-height: 1.6;
-    /* okunabilirlik */
     margin: 10px 0;
-    /* dikey boşluk */
     font-size: 1rem;
-
 }
