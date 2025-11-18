@@ -10,3 +10,25 @@
 .page-title {
   text-align: center;
 }
+
+.main-content img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto 24px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.main-content {
+  text-align: center;
+}
+
+
+@media (min-width: 768px) {
+  .main-content img {
+    width: 100%;
+    max-width: 40%;
+  }
+
+}
