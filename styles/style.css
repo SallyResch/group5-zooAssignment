@@ -84,13 +84,14 @@ body {
 
 .main-content {
   background-color: var(--background-body-offwhite);
-  text-align: center;
-  width: 100%;
-  padding: 25px 30px;
 }
 
-.main-paragraph {
-  padding: 5% 20%;
+.main-paragraph,
+.main-title,
+.animal-card {
+  width: 100%;
+  padding: 25px 30px;
+  text-align: center;
 }
 
 .animal-image {
@@ -152,11 +153,38 @@ body {
 
 @media (max-width:768px) {
   .sidebar {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 240px;
+    background-color: var(--medium-grey);
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar-menu-icon {
+    display: block;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .fa-bars {
+    font-size: 2rem;
+    color: var(--dark-grey);
   }
 }
 
+/*Big screen*/
 @media (min-width: 769px) {
+  .sidebar-menu-icon {
+    display: none;
+  }
+
   .sidebar {
     background-color: var(--medium-grey);
     padding: 10px 0 10px 0;

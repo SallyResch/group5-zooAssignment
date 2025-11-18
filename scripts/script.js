@@ -1,7 +1,7 @@
 const sidebarDiv = document.querySelector(".sidebar");
+const openBtn = document.querySelector(".sidebar-menu-icon");
 const mainContentDiv = document.querySelector(".main-content");
 const initialMainContent = mainContentDiv.innerHTML;
-
 
 function Animal(name, image, description, food, group, link) {
   this.name = name,
@@ -74,7 +74,7 @@ animalArray.forEach(animal => {
 
     clearActiveButtons();
     btn.classList.add("active");
-
+    mainContentDiv.classList.add("animal-card")
     mainContentDiv.innerHTML = "";
     mainContentDiv.appendChild(animalName);
     mainContentDiv.appendChild(animalImage);
@@ -101,3 +101,7 @@ video.autoplay = true;
 video.classList.add("bg_video");
 
 banner.appendChild(video);
+
+openBtn.addEventListener("click", () => {
+  sidebarDiv.classList.toggle("show");
+});
