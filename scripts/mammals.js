@@ -33,8 +33,10 @@ const TasmanianDevil = new Mammal(
 
 const mammal_arr = [Echidna, Quokka, TasmanianDevil];
 
+let currentAnimal='';
 let click = 0;
-const originalHTML = main_content.innerHTML;
+let originalHTML = main_content.innerHTML;
+const display = document.createElement("div");
 
 mammal_arr.forEach((mammal) => {
   const el = document.createElement("div");
@@ -42,24 +44,45 @@ mammal_arr.forEach((mammal) => {
   el.classList.add("el");
   el.addEventListener("click", () => {
 
-    const display = document.createElement("div");
-    click++;
+    if(currentAnimal === mammal.name && click === 1){
+
+      main_content.innerHTML=originalHTML;
+      display.innerHTML='';
+      click=0;
+      currentAnimal=0;
+      // //mammalsAbout.classList.remove('hide');
+      // display.classList.add('show');
+      // currentAnimal= null;
+      return;
+    }
+
     
-    // if(click===1){
 
-    //    
-    //    return
+    
 
-    // }
+    
+    //display.classList.add("main_content");
 
-    //  if (click === 2) {
-    //   //display.innerHTML = "";
-    //   main_content.innerHTML = originalHTML;
-    //   click=0;
-      
-    //  }
 
-   main_content.innerHTML = "";
+
+
+    
+    currentAnimal= `${mammal.name} clicked!`;
+    console.log(currentAnimal); 
+    click++;
+    console.log `${click}`
+    
+
+   //main_content.classList.add('hide');
+    click = 1;
+  currentAnimal = mammal.name;
+
+  
+  main_content.innerHTML = "";
+  display.innerHTML = "";
+
+    main_content.innerHTML = "";
+    main_content.appendChild(display);
 
     const img = document.createElement("img");
     img.src = mammal.img;
@@ -113,12 +136,12 @@ mammal_arr.forEach((mammal) => {
 const mammalsAbout = document.createElement("p");
 const mammalsHeader = document.createElement("h1");
 mammalsHeader.textContent = `Mammals`;
-mammalsHeader.classList.add("mammalsHeader");
+mammalsHeader.classList.add("mammals_header");
 
 mammalsAbout.textContent = `Mammals are warm-blooded vertebrates with hair or fur. They nurse their young with milk and are found in diverse habitats worldwide. Our mammal collection showcases some of the most magnificent creatures from the African savannas.
 
 Select an animal from the sidebar to learn more about them.`;
-mammalsAbout.classList.add("mammalsAbout");
-main_content.classList.add("main-content");
+mammalsAbout.classList.add("mammals_about");
+main_content.classList.add("main_content");
 main_content.appendChild(mammalsHeader);
 main_content.appendChild(mammalsAbout);
