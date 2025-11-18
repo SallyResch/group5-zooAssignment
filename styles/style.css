@@ -1,5 +1,5 @@
 :root {
-  --nav-backround-green: #425230;
+  --nav-background-green: #425230;
   --nav-dark-black: #14190a;
   --nav-hover-text: #e4e5d8;
   --white-color: #ffffff;
@@ -34,7 +34,7 @@ body {
 }
 
 .header {
-  background-color: var(--nav-backround-green);
+  background-color: var(--nav-background-green);
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;

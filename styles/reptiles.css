@@ -1,0 +1,12 @@
+.reptiles-banner {
+  background-image: url(../images/Reptiles/reptiles-page-banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+  width: 100%;
+}
+
+.page-title {
+  text-align: center;
+}
