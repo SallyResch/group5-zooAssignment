@@ -90,24 +90,34 @@ birdList.forEach((bird) => {
     const image = document.createElement("img");
     image.src = bird.image;
     image.alt = bird.name;
-    image.style.width = "250px";
-    image.style.objectFit = "cover";
+    image.classList.add("bird-image");
 
     const group = document.createElement("p");
     group.textContent = `Group: ${bird.group}`;
 
-    const food = document.createElement("p");
-    food.textContent = `Eats: ${bird.food}`;
-
-    const lifespan = document.createElement("p");
-    lifespan.textContent = `Lifespan: ${bird.lifespan}`;
-
-    const found = document.createElement("p");
-    found.textContent = `Found: ${bird.found}`;
-
     const link = document.createElement("a");
     link.href = bird.link;
-    link.textContent = "More info";
+    link.textContent = "Read More";
+    link.classList.add("readme-btn");
+
+    function readMore() {
+      const length = document.createElement("p");
+      length.textContent = `Length: ${bird.length}`;
+      const weight = document.createElement("p");
+      weight.textContent = `Weight: ${bird.weight}`;
+      const food = document.createElement("p");
+      food.textContent = `Eats: ${bird.food}`;
+      const lifespan = document.createElement("p");
+      lifespan.textContent = `Lifespan: ${bird.lifespan}`;
+      const found = document.createElement("p");
+      found.textContent = `Found: ${bird.found}`;
+
+      mainDiv.append(length, weight, food, lifespan, found);
+
+      link.removeEventListener("click", readMore);
+    }
+
+    link.addEventListener("click", readMore);
 
     containerBird.append(title, image, description, group, link);
     mainDiv.appendChild(containerBird);

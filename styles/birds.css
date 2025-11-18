@@ -1,3 +1,15 @@
+:root {
+    --nav-background-green: #425230;
+    --nav-dark-black: #14190a;
+    --nav-hover-text: #e4e5d8;
+    --white-color: #ffffff;
+    --background-body-offwhite: #fcfbf5;
+    --dark-grey: #787c70;
+    --medium-grey: #c9c9c0;
+    --light-grey: #ddded7;
+    --footer-background-green: #3c4230;
+}
+
 .banner-birds {
     background-image: url(../images/cassowary-banner.jpg);
     background-size: cover;
@@ -33,4 +45,27 @@
     line-height: 1.6;
     margin: 10px 0;
     font-size: 1rem;
+}
+
+.readme-btn {
+    display: block;
+    background-color: var(--dark-grey);
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.readme-btn:hover {
+    background-color: var(--nav-background-green);
+    color: var(--white-color);
+}
+
+
+.bird-image {
+    display: flex;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px var(--dark-grey)
 }
