@@ -24,6 +24,10 @@
   text-align: center;
 }
 
+.sidebar-button.active {
+  background-color: #425230;
+  font-weight: bold;
+}
 
 @media (min-width: 768px) {
   .main-content img {
