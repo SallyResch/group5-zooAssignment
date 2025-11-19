@@ -38,7 +38,7 @@ goToStartState();
 
 let animalArray = [enchidna, tasmanianDevil, quokka, kangaroo, cassowary, kookaburra, cockatoo, lizard, turtle, perentie];
 
-animalArray.forEach(animal => {
+animalArray.forEach((animal) => {
   const btn = document.createElement("div");
   btn.textContent = animal.name;
   btn.classList.add("sidebar-button");

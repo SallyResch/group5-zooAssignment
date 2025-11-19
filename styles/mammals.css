@@ -1,0 +1,183 @@
+:root {
+  --nav-backround-green: #425230;
+  --nav-dark-black: #14190a;
+  --nav-hover-text: #e4e5d8;
+  --white-color: #ffffff;
+  --background-body-offwhite: #fcfbf5;
+  --dark-grey: #787c70;
+  --medium-grey: #c9c9c0;
+  --light-grey: #ddded7;
+  --footer-background-green: #3c4230;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-body-offwhite);
+}
+
+.header {
+  background-color: var(--nav-backround-green);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: var(--white-color);
+  text-decoration: none;
+  border: none;
+  padding: 0.85rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+}
+
+.navbar a:hover {
+  color: #14190a;
+  background-color: var(--nav-hover-text);
+}
+
+.banner {
+  min-width: 100%;
+  min-height: 60vmin;
+  max-height: 300px;
+  overflow: hidden;
+  background-image: url("../images/echidna-banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center;
+}
+
+.main-div {
+  flex-grow: 1;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.img {
+  margin: 10px;
+  width: 200px;
+  border-radius: 15px;
+  border: 1px solid var(--dark-grey);
+}
+
+.sidebar {
+  background-color: var(--medium-grey);
+  width: 20%;
+  padding: 10px 0 10px 0;
+  font-size: 1rem;
+}
+
+.h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.el {
+  background-color: var(--dark-grey);
+  color: var(--white-color);
+  padding: 5px;
+  margin: 5px 0 5px 0;
+  text-align: le;
+}
+
+.el:hover {
+  background-color: var(--background-body-offwhite);
+  color: var(--nav-dark-black);
+}
+
+.main_content {
+  background-color: var(--light-grey);
+  border: transparent;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.display {
+  width: 100%;
+  padding: 25px 30px;
+  text-align: center;
+  background-color: var(--light-grey);
+}
+
+.mammals_about {
+  color: var(--nav-dark-black);
+  text-align: left;
+  padding: 1rem;
+  text-align: center;
+}
+
+.button {
+  background-color: var(--dark-grey);
+  color: var(--nav-hover-text);
+  padding: 0.65rem;
+  margin: 1rem;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+}
+
+.button:hover{
+
+  background-color: var(--nav-backround-green);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.mammals_header {
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+
+  color: var(--nav-dark-black);
+}
+
+.footer {
+  background-color: coral;
+  padding: 2rem;
+}
+
+.mammals_arr {
+  display: flex;
+  flex-direction: column;
+  color: var(--white-color);
+  background: var(--dark-grey);
+}
+
+.mammal {
+  background-color: var(--dark-grey);
+  color: var(--white-color);
+}
+
+@media (max-width:768px) {
+
+.sidebar{
+
+  width: 44%;
+}
+}
