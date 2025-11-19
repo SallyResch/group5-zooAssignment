@@ -273,7 +273,12 @@ body {
   .navbar.show {
     transform: translateX(0);
   }
-  
+
+  .fa-bars {
+    font-size: 2rem;
+    color: var(--nav-hover-text);
+  }
+
   .sidebar {
     position: fixed;
     top: 0;
@@ -312,10 +317,5 @@ body {
 
   .close-button {
     text-align: end;
-  }
-
-  .fa-bars {
-    font-size: 2rem;
-    color: var(--dark-grey);
   }
 }
