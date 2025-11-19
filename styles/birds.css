@@ -37,7 +37,7 @@
     align-items: center;
     text-align: center;
     padding: 20px;
-
+    width: 100%;
 }
 
 .main-content p {
@@ -60,7 +60,6 @@
     background-color: var(--nav-background-green);
     color: var(--white-color);
 }
-
 
 .bird-image {
     display: flex;
