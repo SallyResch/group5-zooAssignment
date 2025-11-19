@@ -1,4 +1,4 @@
-const sidebarDiv = document.querySelector(".sidebar");
+const sidebarDiv = document.querySelector(".sidebar-home");
 const openBtn = document.querySelector(".sidebar-menu-icon");
 const mainContentDiv = document.querySelector(".main-content");
 const closeIcon = document.querySelector(".close-icon");
