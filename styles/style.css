@@ -279,6 +279,11 @@ body {
     color: var(--nav-hover-text);
   }
 
+  .sideburger-menu {
+    font-size: 2rem;
+    color: var(--dark-grey);
+  }
+
   .sidebar {
     position: fixed;
     top: 0;
