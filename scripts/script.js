@@ -65,13 +65,9 @@ banner.appendChild(video);
 
 ////navbarResponsive////
 
-const ham_menu = document.querySelector('.ham_menu');
-const navbar= document.querySelector('.navbar');
+const ham_menu = document.querySelector(".ham_menu");
+const navbar = document.querySelector(".navbar");
 
-
-ham_menu.addEventListener('click',()=>{
-
-  navbar.classList.toggle('show')
-})
-
-
+ham_menu.addEventListener("click", () => {
+  navbar.classList.toggle("show");
+});
