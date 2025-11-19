@@ -73,6 +73,32 @@ reptileArray.forEach((reptile) => {
     mainContent.appendChild(image);
     mainContent.appendChild(food);
     mainContent.appendChild(lifespan);
-    mainContent.appendChild(found)
+    mainContent.appendChild(found);
+
+    const readMoreBtn = document.createElement('button');
+    readMoreBtn.textContent = "Read More";
+
+    readMoreBtn.addEventListener("click", () => {
+
+      const length = document.createElement('p');
+      length.textContent = 'Grows to be ' + reptile.length + ' long.';
+
+      const weight = document.createElement('p');
+      weight.textContent = 'Weighs around ' + reptile.weight;
+
+      const description = document.createElement('p');
+      description.textContent = reptile.description;
+
+      mainContent.appendChild(length);
+      mainContent.appendChild(weight);
+      mainContent.appendChild(description);
+
+      readMoreBtn.remove()
+
+    })
+
+
+    mainContent.appendChild(readMoreBtn);
+
   });
 });
