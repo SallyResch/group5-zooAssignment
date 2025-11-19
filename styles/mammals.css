@@ -95,7 +95,7 @@ body {
   color: var(--white-color);
   padding: 5px;
   margin: 5px 0 5px 0;
-  text-align: left;
+  text-align: le;
 }
 
 .el:hover {
@@ -172,4 +172,12 @@ body {
 .mammal {
   background-color: var(--dark-grey);
   color: var(--white-color);
+}
+
+@media (max-width:768px) {
+
+.sidebar{
+
+  width: 44%;
+}
 }
