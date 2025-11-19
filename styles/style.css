@@ -113,7 +113,7 @@ body {
 }
 
 .main-content {
-  background-color: rgb(245, 129, 255);
+  background-color: var(--background-body-offwhite);
   width: 100%;
 }
 
