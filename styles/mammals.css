@@ -95,7 +95,7 @@ body {
   color: var(--white-color);
   padding: 5px;
   margin: 5px 0 5px 0;
-  text-align: center;
+  text-align: left;
 }
 
 .el:hover {
@@ -127,13 +127,18 @@ body {
 }
 
 .button {
-  background-color: var(--nav-backround-green);
+  background-color: var(--dark-grey);
   color: var(--nav-hover-text);
   padding: 0.65rem;
   margin: 1rem;
   border-radius: 8px;
   border: none;
   text-align: center;
+}
+
+.button:hover{
+
+  background-color: var(--nav-backround-green);
 }
 
 .hide {

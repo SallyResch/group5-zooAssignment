@@ -7,32 +7,35 @@ h2.textContent = `Mammals`;
 h2.classList.add("h2");
 sidebar.appendChild(h2);
 
-function Mammal(img, name, aboutShort, aboutFull) {
-  this.img = img;
+function Mammal(name, img, aboutShort, aboutFull) {
   this.name = name;
+  this.img = img;
   this.aboutShort = aboutShort;
   this.aboutFull = aboutFull;
 }
 
 const Echidna = new Mammal(
-  "images/Echidna2.jpg",
   "Echidna",
-  "The echidna is a unique egg-laying mammal found in Australia.",
-  "The echidna is a unique egg-laying mammal found in Australia. It has spines, a long sticky tongue and feeds mainly on ants and termites."
+  "images/Echidna2.jpg",
+
+  "Description: Echidnas, also called spiny anteaters, are walking contradictions. They are mammals, but they lay eggs. They are often classified as long- or sort-beaked, but don't have beaks at all, in the traditional sense; they have fleshy noses that can be either on the long side or rather short. They don't really look like true anteaters (Myrmecophaga tridactyla), either, and they are not closely related to them. They are spiny, though; their bodies are covered with hollow, barbless quills. Echidnas are monotremes, egg-laying mammals. The only other living monotreme is the platypus.",
+  " lifespan: 50 years,group: mammals,food: insects such as ants and termites, beetle larvae and worms,length: 76cm,weight: 10kg,found: Throughout Australia"
 );
 
 const Quokka = new Mammal(
-  "images/quokka1.jpg",
   "Quokka",
-  "The quokka is a small, friendly marsupial native to Western Australia",
-  "The quokka is a small, friendly marsupial native to Western Australia. It is known for its adorable smile, round body, and curious nature. Quokkas live mainly on Rottnest Island and feed on leaves, grasses, and shrubs. They are mostly active at night and are not afraid of humans, which makes them very popular among tourists."
+  "images/quokka1.jpg",
+
+  "Description: The Quokka, Setonix brachyurus, was described by early Dutch explorer, Willem de Vlamingh, 'as a kind of rat as big as a common cat'. His first sighting of the Quokka was on an island off the mouth of the Swan River. He named the island Rottenest ('rat nest') in honour of this sighting. The island is now known as Rottnest Island. Essentially the Quokka looks very much like other wallabies.It has short, very coarse and thick grey-brown fur over most of the body with lighter parts underneath. Its facial features consist of a naked nose on a short, broad face with rounded furry ears.The tail is relatively short and mostly devoid of hair. In contrast, the hair on the feet extends to cover its claws.",
+  "lifespan: 10 years,group: mammals,food: Plant eaters, they munch on shrubs and grasses.length: 50cm,weight: 3kg,found: Only found on Rottnest Island and a few places on mainland Western Australia"
 );
 
 const TasmanianDevil = new Mammal(
-  "images/tasmanian-devil1.jpg",
   "Tasmanian Devil",
-  "The Tasmanian Devil is a carnivorous marsupial known for its loud screeches and strong bite.",
-  "The Tasmanian Devil is a carnivorous marsupial found only on the island of Tasmania. Despite its small size, it has one of the strongest bites relative to body size in the animal kingdom. Devils are scavengers and predators that feed on carrion, small mammals, and birds. They are famous for their fierce behavior, loud screeches, and powerful jaws. Conservation efforts are ongoing due to a contagious facial tumor disease that threatens the species."
+  "images/tasmanian-devil1.jpg",
+
+  "Description: The Tasmanian devil (Sarcophilus harrisii) (palawa kani: purinina)[3] is a carnivorous marsupial of the family Dasyuridae. Until recently, it was only found on the island state of Tasmania, but it has been reintroduced to New South Wales in mainland Australia, with a small breeding population. The size of a small dog, the Tasmanian devil became the largest carnivorous marsupial in the world, following the extinction of the thylacine in 1936. It is related to quolls, and distantly related to the thylacine. It is characterised by its stocky and muscular build, black fur, pungent odour, extremely loud and disturbing screech, keen sense of smell, and ferocity when feeding. The Tasmanian devil's large head and neck allow it to generate among the strongest bites per unit body mass of any extant predatory land mammal. It hunts prey and scavenges on carrion.",
+  "lifespan: 5 years,group: mammals,food: A predator, then eat meat from other animals such as wallabies and wombats"
 );
 
 const mammal_arr = [Echidna, Quokka, TasmanianDevil];
@@ -40,10 +43,9 @@ const mammal_arr = [Echidna, Quokka, TasmanianDevil];
 let currentAnimal = null;
 
 const display = document.createElement("div");
+main_content.parentNode.insertBefore(display, main_content.nextSibling);
 display.classList.add("hide");
 display.classList.add("display");
-
-main_content.parentNode.insertBefore(display, main_content.nextSibling);
 
 const updateDisplay = () => {
   while (display.firstChild) {
@@ -72,15 +74,15 @@ mammal_arr.forEach((mammal) => {
       return;
     }
 
-    const img = document.createElement("img");
-    img.src = mammal.img;
-    img.classList.add("img");
-    display.appendChild(img);
-
     const name = document.createElement("h2");
     name.textContent = mammal.name;
     name.classList.add("h2");
     display.appendChild(name);
+
+    const img = document.createElement("img");
+    img.src = mammal.img;
+    img.classList.add("img");
+    display.appendChild(img);
 
     const infoShort = document.createElement("p");
     infoShort.textContent = mammal.aboutShort;
@@ -122,9 +124,7 @@ const mammalsAbout = document.createElement("p");
 const mammalsHeader = document.createElement("h1");
 mammalsHeader.textContent = `Mammals`;
 mammalsHeader.classList.add("mammals_header");
-
 mammalsAbout.textContent = `Mammals are warm-blooded vertebrates with hair or fur. They nurse their young with milk and are found in diverse habitats worldwide. Our mammal collection showcases some of the most magnificent creatures from the African savannas.
-
 Select an animal from the sidebar to learn more about them.`;
 mammalsAbout.classList.add("mammals_about");
 main_content.classList.add("main_content");
