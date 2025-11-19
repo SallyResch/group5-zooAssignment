@@ -77,6 +77,7 @@ reptileArray.forEach((reptile) => {
 
     const readMoreBtn = document.createElement('button');
     readMoreBtn.textContent = "Read More";
+    readMoreBtn.classList.add('read-more-button')
 
     readMoreBtn.addEventListener("click", () => {
 
