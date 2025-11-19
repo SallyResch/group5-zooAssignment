@@ -27,8 +27,9 @@
 }
 
 .default-message {
-  max-width: 50%;
+  max-width: 65%;
   text-align: center;
+  margin: 0 auto;
 }
 
 .sidebar-button.active {
@@ -39,7 +40,10 @@
 @media (min-width: 768px) {
   .main-content img {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
   }
 
+  .default-message {
+    max-width: 50%;
+  }
 }
