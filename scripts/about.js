@@ -11,7 +11,7 @@ function Member(name, image, description) {
 const sevilay = new Member(
   "Sevilay Guns",
   "../images/sevilay.png",
-  "Sevilay is a former concept designer studying Front-End Development. She loves blending design and programming to create interactive experiences, and is currently a first-year programming student at Futuregames.🦘"
+  "Sevilay is a former concept designer studying Front-End Development. She loves blending design and programming to create interactive experiences, and is currently a first-year programming student at Futuregames.🌱"
 );
 const simge = new Member(
   "Simge Ates",
