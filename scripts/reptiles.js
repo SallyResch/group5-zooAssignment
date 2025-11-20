@@ -31,3 +31,11 @@ reptileArray.forEach(reptile => {
   button.classList.add("sidebar-button", reptile.className);
   sidebar.appendChild(button);
 });
+
+
+const ham_menu = document.querySelector(".ham_menu");
+const navbar = document.querySelector(".navbar");
+
+ham_menu.addEventListener("click", () => {
+  navbar.classList.toggle("show");
+});
