@@ -37,7 +37,10 @@ memberArray.forEach((member) => {
       return;
     }
 
-    allButtons.forEach((button) => button.classList.remove("active"));
+    allButtons.forEach((button) => {
+      button.classList.remove("active");
+    });
+
     btn.classList.add("active");
 
     mainDiv.innerHTML = "";
@@ -59,7 +62,7 @@ memberArray.forEach((member) => {
     containerMember.append(title, image, description);
     mainDiv.appendChild(containerMember);
 
-    containerMember.classList.add("fade-in"); // doğru
+    containerMember.classList.add("fade-in");
     mainDiv.classList.remove("fade-in");
     void mainDiv.offsetWidth;
     mainDiv.classList.add("fade-in");

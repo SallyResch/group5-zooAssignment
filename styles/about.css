@@ -36,6 +36,12 @@
 }
 
 .main-content {
+
+    background-image: url('../images/aboutBackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,12 +55,12 @@
     line-height: 1.6;
     margin: 10px 0;
     font-size: 1.5rem;
-    color: #425230;
+    color: var(--nav-dark-black);
     padding: 20px;
 }
 
 h2 {
-    color: #3c4230;
+    color: var(--nav-dark-black);
 }
 
 .member-image {
@@ -65,6 +71,7 @@ h2 {
     border-radius: 15px;
     box-shadow: 0 2px 10px var(--dark-grey)
 }
+
 
 .fade-in {
     opacity: 0;
