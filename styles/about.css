@@ -1,0 +1,92 @@
+.banner-members {
+    background-image: url(../images/birds_page_banner4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+}
+
+.sidebar-button.active {
+    background-color: var(--background-body-offwhite);
+    color: var(--nav-dark-black);
+}
+
+.member-container {
+    display: flex;
+    height: auto;
+    width: 400px;
+    background-color: #e2e7c9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.main-content {
+
+    background-image: url('../images/aboutBackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.main-content p {
+    max-width: 600px;
+    line-height: 1.6;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: var(--nav-dark-black);
+    padding: 20px;
+}
+
+h2 {
+    color: var(--nav-dark-black);
+}
+
+.member-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px var(--dark-grey)
+}
+
+
+.fade-in {
+    opacity: 0;
+    animation:
+        fadeIn 1s ease-in-out forwards,
+        scalePop 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .member-image {
+        max-width: 250px;
+    }
+
+    .member-container {
+        max-width: 200px;
+        height: auto;
+    }
+}
