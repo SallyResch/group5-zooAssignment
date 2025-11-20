@@ -8,10 +8,18 @@ function Member(name, image, description) {
   this.description = description;
 }
 
-const sevilay = new Member("Sevilay Guns", "../images/sevilay.png", "Example text for Sevilay.");
-const simge = new Member("Simge Ates", "../images/simge.png", "Example text for Simge.");
-const mousumi = new Member("Mousumi Mukherjee", "../images/mousumi.png", "Example text for Mousumi.");
-const sally = new Member("Sally Resch", "../images/sally.png", "Example text for Sally.");
+const sevilay = new Member(
+  "Sevilay Guns",
+  "../images/sevilay.png",
+  "Sevilay is a former concept designer studying Front-End Development. She loves blending design and programming to create interactive experiences, and is currently a first-year programming student at Futuregames.🦘"
+);
+const simge = new Member(
+  "Simge Ates",
+  "../images/simge.png",
+  "Simge is a Front-End student at Futuregames, passionate about coding and designing webpages that are both beautiful and user-friendly.🌱"
+);
+const mousumi = new Member("Mousumi Mukherjee", "../images/mousumi.png", "Passionate about creating engaging, and user-friendly web experiences.🌱");
+const sally = new Member("Sally Resch", "../images/sally.png", "Former head chef, now  Developer with a passion for kind communication, fun and determination.🌱 ");
 
 let memberArray = [sevilay, simge, mousumi, sally];
 
@@ -46,10 +54,15 @@ memberArray.forEach((member) => {
     image.classList.add("member-image");
 
     const description = document.createElement("p");
-    description.textContent = `Description: ${member.description}`;
+    description.textContent = `About: ${member.description}`;
 
     containerMember.append(title, image, description);
     mainDiv.appendChild(containerMember);
+
+    containerMember.classList.add("fade-in"); // doğru
+    mainDiv.classList.remove("fade-in");
+    void mainDiv.offsetWidth;
+    mainDiv.classList.add("fade-in");
   });
 
   sidebarDiv.appendChild(btn);
