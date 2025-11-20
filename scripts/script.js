@@ -53,7 +53,8 @@ animalArray.forEach((animal) => {
   animalImage.alt = animal.name;
 
   const animalDescription = document.createElement("p");
-  animalDescription.textContent = `Description: ${animal.description}`;
+  const shortDescription = animal.description.slice(0, 200) + "...";
+  animalDescription.textContent = `Description: ${shortDescription}`;
 
   const animalGroup = document.createElement("p");
   animalGroup.textContent = `Group: ${animal.group}`;
@@ -63,11 +64,9 @@ animalArray.forEach((animal) => {
 
   const animalLink = document.createElement("a");
   animalLink.href = animal.link;
-  animalLink.textContent = `Read more`;
-  animalLink.target = "_blank";
+  animalLink.textContent = `Go to groupPage`;
 
   btn.addEventListener("click", () => {
-
     if (btn.classList.contains("active")) {
       goToStartState();
       return;
@@ -81,8 +80,9 @@ animalArray.forEach((animal) => {
     mainContentDiv.appendChild(animalImage);
     mainContentDiv.appendChild(animalDescription);
     mainContentDiv.appendChild(animalGroup);
-    mainContentDiv.appendChild(animalFood);
     mainContentDiv.appendChild(animalLink);
+    mainContentDiv.appendChild(animalFood);
+
   });
 
   sidebarDiv.appendChild(btn);
