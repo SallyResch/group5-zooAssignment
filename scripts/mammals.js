@@ -130,3 +130,14 @@ mammalsAbout.classList.add("mammals_about");
 main_content.classList.add("main_content");
 main_content.appendChild(mammalsHeader);
 main_content.appendChild(mammalsAbout);
+
+
+////navbarResponsive////
+
+const ham_menu = document.querySelector(".ham_menu");
+const navbar = document.querySelector(".navbar");
+
+ham_menu.addEventListener("click", () => {
+  navbar.classList.toggle("show");
+});
+
