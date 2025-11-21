@@ -144,13 +144,13 @@ Only one member can be active at a time
 
 👥 Team Contributions
 
-⦁	  Member 1 – (Write role:)
+⦁	  Member Sevilay – (Write role:Responsible for the birds page (HTML, CSS, and JavaScript) and the About page (HTML, CSS, and JavaScript), including the illustrations on the About page. Also designed the logo, selected the color scheme, arranged the illustrations, and designed the footer on the main page.)
 ⦁	
-⦁	  Member 2 – (Write role)
+⦁	  Member Simge – (Write role:In this project, I was responsible to find all the images for the entire page as well as the  HTML, CSS, and JavaScript  for the reptile page.)
 ⦁	
-⦁	  Member 3 – (Write role)
+⦁	  Member Sally – (Write role:Contributed to the initial design of the website. Responsible for the homepage sidebar (HTML, CSS, and JavaScript) and its responsive design. Also was the contact person to ensure all merge conflicts were resolved)
 ⦁	
-⦁	  Member 4 – (Write role if you have)
+⦁	  Member Mousumi – (Write role:Responsible for the Mammals page (HTML, CSS, and JavaScript), including the banner video, navbar, and its responsive design.)
 
 
 
@@ -203,9 +203,11 @@ This project taught us:
 ⦁	  How to apply JS logic to create interactive content
 ⦁	
 ⦁	  How to collaborate as a team
-⦁	
+
+⦁	  How to work in agile way.
+
 ⦁	  How to use Git & GitHub professionally
 ⦁	
 ⦁	  How to work using a Scrum-like process in a real development workflow
 
-We’re proud of our teamwork and the final result!
+We are proud of our teamwork and the final result!
