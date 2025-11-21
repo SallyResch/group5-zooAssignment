@@ -38,7 +38,19 @@ const TasmanianDevil = new Mammal(
   "lifespan: 5 years,group: mammals,food: A predator, then eat meat from other animals such as wallabies and wombats"
 );
 
-const mammal_arr = [Echidna, Quokka, TasmanianDevil];
+const Kangaroo = new Mammal(
+  "Kangaroo",
+  "images/kangaroo.png",
+
+  "Description: Kangaroos are marsupials from the subfamily Macropodinae (macropods, meaning of large foot). In common use, the term is used to describe the largest species from this family, the red kangaroo, as well as the antilopine kangaroo, eastern grey kangaroo, and western grey kangaroo.[1] Kangaroos are indigenous to Australia and New Guinea. The Australian government estimates that 42.8 million kangaroos lived within the commercial harvest areas of Australia in 2019, down from 53.2 million in 2013.[2]",
+  "Food: Plant eaters, they munch on shrubs and grasses,Length: 150-180cm,group: mammals,Lifespan: around 20 years,Weight: 50kg"
+
+
+);
+
+
+
+const mammal_arr = [Echidna, Quokka, TasmanianDevil, Kangaroo];
 
 let currentAnimal = null;
 
@@ -130,3 +142,14 @@ mammalsAbout.classList.add("mammals_about");
 main_content.classList.add("main_content");
 main_content.appendChild(mammalsHeader);
 main_content.appendChild(mammalsAbout);
+
+
+////navbarResponsive////
+
+const ham_menu = document.querySelector(".ham_menu");
+const navbar = document.querySelector(".navbar");
+
+ham_menu.addEventListener("click", () => {
+  navbar.classList.toggle("show");
+});
+
