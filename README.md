@@ -150,7 +150,7 @@ Only one member can be active at a time
 ⦁	
 ⦁	  Member Sally – (Write role:Contributed to the initial design of the website. Responsible for the homepage sidebar (HTML, CSS, and JavaScript) and its responsive design. Also was the contact person to ensure all merge conflicts were resolved)
 ⦁	
-⦁	  Member Mousumi – (Write role:Responsible for the Mammals page (HTML, CSS, and JavaScript), including the banner video, navbar, and its responsive design.)
+⦁	  Member Mousumi – (Write role:Responsible for the Mammals page (HTML, CSS, and JavaScript), including the banner video, Read me, navbar, and its responsive design.)
 
 
 
