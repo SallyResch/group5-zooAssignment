@@ -125,3 +125,13 @@ birdArray.forEach((bird) => {
 
   sidebarDiv.appendChild(btn);
 });
+
+
+////navbarResponsive////
+
+const ham_menu = document.querySelector(".ham_menu");
+const navbar = document.querySelector(".navbar");
+
+ham_menu.addEventListener("click", () => {
+  navbar.classList.toggle("show");
+});
