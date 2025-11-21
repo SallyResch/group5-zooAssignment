@@ -11,14 +11,6 @@
   text-align: center;
 }
 
-
-@media (max-width:768px) {
-
-.sidebar{
-
-  width: 44%;
-}
-}
 .sidebar-title {
   color: inherit;
   text-decoration: none;
@@ -59,8 +51,8 @@
 }
 
 .read-more-button {
-  color: #ddded7;
-  background-color: #787c70;
+  color: var(--white-color);
+  background-color: var(--dark-grey);
   padding: 8px;
   font-size: medium;
   border-radius: 8px;
@@ -70,11 +62,11 @@
 }
 
 .read-more-button:hover {
-  color: #787c70;
-  background-color: #ddded7;
+  color: var(--white-color);
+  background-color: var(--nav-background-green);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .main-content img {
     width: 100%;
     max-width: 400px;
