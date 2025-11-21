@@ -46,7 +46,8 @@
 }
 
 .sidebar-button.active {
-  background-color: #425230;
+  background-color: var(--background-body-offwhite);
+  color: var(--nav-dark-black);
   font-weight: bold;
 }
 
