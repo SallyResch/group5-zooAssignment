@@ -1,15 +1,3 @@
-:root {
-    --nav-background-green: #425230;
-    --nav-dark-black: #14190a;
-    --nav-hover-text: #e4e5d8;
-    --white-color: #ffffff;
-    --background-body-offwhite: #fcfbf5;
-    --dark-grey: #787c70;
-    --medium-grey: #c9c9c0;
-    --light-grey: #ddded7;
-    --footer-background-green: #3c4230;
-}
-
 .banner-birds {
     background-image: url(../images/cassowary-banner.jpg);
     background-size: cover;
