@@ -310,4 +310,8 @@ body {
   .close-button {
     text-align: end;
   }
+
+  .close-icon {
+    padding: 15px;
+  }
 }
